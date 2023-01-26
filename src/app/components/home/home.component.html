@@ -1,23 +1,22 @@
 <div class="flex">
+  <div class="column">
+    <div class="logo">
+      <app-logo></app-logo>
+    </div>
     <div class="commandeType">
-        <app-commande-type></app-commande-type>
+      <app-commande-type></app-commande-type>
     </div>
+  </div>
+  <div class="column">
     <div class="recherche">
-        <table>
-            <tr>
-                <td>
-                    <app-filtre></app-filtre>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <app-resultat></app-resultat>
-                </td>
-            </tr>
-        </table>
+      <app-recherche></app-recherche>
     </div>
-    <div class="panier">
-        <app-panier></app-panier>
+    <div class="resultat">
+      <app-resultat></app-resultat>
     </div>
+  </div>
+  <div class="panier">
+    <app-panier></app-panier>
+  </div>
 </div>
 

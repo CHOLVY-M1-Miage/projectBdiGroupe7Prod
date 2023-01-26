@@ -4,20 +4,32 @@
     vertical-align: center;
     padding: 2%;
 }
+
+.column{
+  display:flex;
+  justify-content: space-between;
+  vertical-align: center;
+  flex-direction: column;
+  min-height: 80vh;
+}
 .commandeType{
-    border: 1px solid black;
-    min-height: 80vh;
-    width: 15vw;
+  width: 30vh;
+  border: 1px dotted;
+  height: 90%;
+  align-self: center;
 }
 .recherche{
-    border: 1px dotted black;
-    min-height:  80vh;
-    width: 50vw;
+  border: 1px solid;
+  width: 105vh;
 }
 .panier{
     border: 1px solid black;
     min-height:  80vh;
     width: 15vw;
+}
+
+.resultat{
+  border: 1px solid;
 }
 
 /*
