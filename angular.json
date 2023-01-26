@@ -65,10 +65,15 @@
             },
             "development": {
               "browserTarget": "gromed:build:development"
-            },
-          "host":"0.0.0.0"
+            }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "browserTarget": "angular-nodejs-example:build",
+            "proxyConfig": "proxy.conf.json",
+            "host": "0.0.0.0",
+            "port": 4200
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
