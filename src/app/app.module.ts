@@ -13,9 +13,10 @@ import { PanierComponent } from './components/home/panier/panier.component';
 import { ContenueComponent } from './components/home/panier/contenue/contenue.component';
 import { ManegeComponent } from './components/home/panier/manege/manege.component';
 import { FiltreComponent } from './components/home/recherche/filtre/filtre.component';
-import { ResultatComponent } from './components/home/recherche/resultat/resultat.component';
+import { ResultatComponent } from './components/home/resultat/resultat.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from "@angular/material/form-field";
+import { ToolComponent } from './components/dev/tool/tool.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     ContenueComponent,
     ManegeComponent,
     FiltreComponent,
-    ResultatComponent
+    ResultatComponent,
+    ToolComponent
   ],
     imports: [
         BrowserModule,
