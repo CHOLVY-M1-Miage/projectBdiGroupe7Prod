@@ -1,11 +1,8 @@
 <div>
     <form>
-        <input type="checkbox"  id="name">
-        <label for="name">Nom de médicament</label>
-        <input type="checkbox" id="molecule">
-        <label for="name">Molécule</label>
-        <input type="checkbox" id="Fournisseur">
-        <label for="fournisseur">Fournisseur (titulaire)</label>
+        <mat-checkbox (change)="filterByName($event)">Nom de médicament</mat-checkbox>
+        <mat-checkbox (change)="filterByMolecule($event)">Nom de médicament</mat-checkbox>
+        <mat-checkbox (change)="filterByFurnisher($event)">Nom de médicament</mat-checkbox>
         <button mat-button>Rechercher</button>
     </form>
 </div>

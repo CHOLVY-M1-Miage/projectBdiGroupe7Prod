@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { ToolComponent } from './components/dev/tool/tool.component';
+import {FormsModule} from "@angular/forms";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ToolComponent } from './components/dev/tool/tool.component';
         AppRoutingModule,
         BrowserAnimationsModule,
         MatFormFieldModule,
-      MatInputModule
+      MatInputModule,
+        FormsModule,
+        MatCheckboxModule
     ],
   providers: [],
   bootstrap: [AppComponent]
