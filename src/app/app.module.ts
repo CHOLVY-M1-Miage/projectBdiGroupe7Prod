@@ -16,6 +16,7 @@ import { FiltreComponent } from './components/home/recherche/filtre/filtre.compo
 import { ResultatComponent } from './components/home/resultat/resultat.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 import { ToolComponent } from './components/dev/tool/tool.component';
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ToolComponent } from './components/dev/tool/tool.component';
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+      MatInputModule
     ],
   providers: [],
   bootstrap: [AppComponent]
