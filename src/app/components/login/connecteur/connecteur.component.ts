@@ -7,13 +7,15 @@ import {DataCenterService} from "../../../service/data-center.service";
   styleUrls: ['./connecteur.component.css']
 })
 export class ConnecteurComponent {
-  //dentifiant: string;
-  //mdp: string;
+  login !:string;
+  passeword !: string;
 
   constructor(private dataCenter: DataCenterService) {}
 
-  identifiantChange(){
-
+  connection():void{
+    if (this.passeword == "ok"){
+      
+    }
   }
 
 

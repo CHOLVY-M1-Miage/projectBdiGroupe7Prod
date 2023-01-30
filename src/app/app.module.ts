@@ -20,6 +20,10 @@ import {MatInputModule} from "@angular/material/input";
 import { ToolComponent } from './components/dev/tool/tool.component';
 import {FormsModule} from "@angular/forms";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatButtonModule} from "@angular/material/button";
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from "@angular/material/sort";
+
 
 @NgModule({
   declarations: [
@@ -42,9 +46,12 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
         AppRoutingModule,
         BrowserAnimationsModule,
         MatFormFieldModule,
-      MatInputModule,
+        MatInputModule,
         FormsModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatButtonModule,
+        MatTableModule,
+        MatSortModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,8 @@
-<div>
+<div class="page">
     <form>
         <mat-checkbox (change)="filterByName($event)">Nom de médicament</mat-checkbox>
-        <mat-checkbox (change)="filterByMolecule($event)">Nom de médicament</mat-checkbox>
-        <mat-checkbox (change)="filterByFurnisher($event)">Nom de médicament</mat-checkbox>
-        <button mat-button>Rechercher</button>
+        <mat-checkbox (change)="filterByMolecule($event)">molecule</mat-checkbox>
+        <mat-checkbox (change)="filterByFurnisher($event)">fournisseur</mat-checkbox>
     </form>
+    <button mat-button>Rechercher</button>
 </div>
