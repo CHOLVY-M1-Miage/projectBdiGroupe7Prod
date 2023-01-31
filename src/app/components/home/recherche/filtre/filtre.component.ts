@@ -6,6 +6,10 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrls: ['./filtre.component.css']
 })
 export class FiltreComponent {
+  fournisseur :any;
+  mollecule :any;
+  medicament :any;
+
   namefilter !: boolean;
   moleculefilter !: boolean;
   furnisherfilter !: boolean;
@@ -17,5 +21,10 @@ export class FiltreComponent {
   }
   filterByFurnisher(event : any){
     this.furnisherfilter = event;
+  }
+
+  search(){
+    const url = "mollecule="+ this.mollecule+  "fournisseur="+this.fournisseur + "medicament="+this.medicament;
+    console.log(url);
   }
 }

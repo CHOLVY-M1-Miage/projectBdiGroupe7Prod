@@ -10,20 +10,29 @@
                 <div>
                     <mat-form-field class="example-full-width">
                         <mat-label>Médicament</mat-label>
-                        <input matInput placeholder="Ex.doliprane">
+                        <input [(ngModel)]="medicament" matInput placeholder="Ex.doliprane">
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field class="example-full-width">
                         <mat-label>Mollécule</mat-label>
-                        <input matInput placeholder="Ex.paracétamol">
+                        <input [(ngModel)]="mollecule" matInput placeholder="Ex.paracétamol">
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field class="example-full-width">
                         <mat-label>Fournisseur</mat-label>
-                        <input matInput placeholder="Ex.boiron">
+                        <input [(ngModel)]="fournisseur" matInput placeholder="Ex.boiron">
                     </mat-form-field>
+                </div>
+                <div>
+                    <mat-checkbox>générique</mat-checkbox>
+                </div>
+                <div>
+                    <mat-checkbox>Agrément collectivité</mat-checkbox>
+                </div>
+                <div>
+                    <button mat-button (click)="search()">Rechecher</button>
                 </div>
             </div>
         </mat-expansion-panel>
