@@ -30,6 +30,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from "@angular/material/sort";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import {MatSortModule} from "@angular/material/sort";
         MatButtonModule,
         MatTableModule,
         MatSortModule,
+        MatExpansionModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
