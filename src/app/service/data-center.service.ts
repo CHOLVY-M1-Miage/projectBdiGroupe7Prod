@@ -18,6 +18,7 @@ export class DataCenterService {
     const newList = this.articles.value.map(a => a.ID ? a : art);
     this.articles.next(newList);
   }
+
   loadPanier():Article[]{
     const articles: Article[] = [
       {ID : 1, DENOMINATIONMEDICAMENT : "a1", LIBELLEPRESTATION : "b1", DENOMATIONSUBSTANCE: "d1", TITULAIRE : "c1", PRIX :1.0,QUANTITE: 1},
