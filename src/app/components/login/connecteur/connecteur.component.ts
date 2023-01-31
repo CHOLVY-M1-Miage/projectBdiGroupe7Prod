@@ -12,9 +12,4 @@ export class ConnecteurComponent {
 
   constructor(private dataCenter: DataCenterService) {}
 
-  identifiantChange(){
-
-  }
-
-
 }

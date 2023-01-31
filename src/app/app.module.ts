@@ -16,6 +16,7 @@ import { FiltreComponent } from './components/home/recherche/filtre/filtre.compo
 import { ResultatComponent } from './components/home/resultat/resultat.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 import { ToolComponent } from './components/dev/tool/tool.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
@@ -24,6 +25,12 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from "@angular/forms";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatButtonModule} from "@angular/material/button";
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from "@angular/material/sort";
+
 
 @NgModule({
   declarations: [
@@ -51,7 +58,13 @@ import { HttpClientModule } from '@angular/common/http';
         AngularFireModule.initializeApp(environment.firebase),
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideAuth(() => getAuth()),
-        provideFirestore(() => getFirestore())
+        provideFirestore(() => getFirestore()),
+        MatInputModule,
+        FormsModule,
+        MatCheckboxModule,
+        MatButtonModule,
+        MatTableModule,
+        MatSortModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

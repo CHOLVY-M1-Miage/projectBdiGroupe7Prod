@@ -1,8 +1,18 @@
-<div>Votre panier (x items)</div>
-<div>
-    <label for="doliprane">Number of doliprane (min 1):</label>
-
-    <input type="number" id="doliprane" name="doliprane"
-           min="1">
-</div>
+<div>Votre panier ({{articles.length}} items)</div>
+<ng-container *ngFor="let article of articles">
+    <div class="article">
+        NOM:{{article.DENOMINATIONMEDICAMENT}}<br>
+        SUB:{{article.DENOMATIONSUBSTANCE}}<br>
+        DE: {{article.TITULAIRE}}<br>
+        SousTotal: <input type="number" size="1" min="0" max="99" [value]="article.QUANTITE" (change)="updateQuantite(article,$event)"> * {{article.PRIX}} = {{article.QUANTITE * article.PRIX}}€
+    </div>
+</ng-container>
+<ng-container *ngIf="articles.length > 0">
+    <div class="article">
+        TOTAL: {{totalPanier}}€
+    </div>
+</ng-container>
+<ng-container>
+    <button mat-button (click)="validerPanier()">Valider Panier</button>
+</ng-container>
 
