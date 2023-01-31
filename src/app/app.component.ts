@@ -34,12 +34,10 @@ export class AppComponent implements OnInit{
         this.currentUser = this.getUserById(user.uid || '');
       // this.currentChami?.then(data => this.chamiSubj.next(data))
     });
-      
   }
 
   // Connexion avec Firebase
   login(creds: string[]): void {
-    
     this.auth.signInWithEmailAndPassword(creds[0], creds[1]).then((userCred) => {
       this.currentUser = this.getUserById(userCred.user?.uid || '');
     }).catch((error) => {
@@ -48,6 +46,9 @@ export class AppComponent implements OnInit{
     });
   }
 
+  logout(): void {
+    this.auth.signOut();
+  }
 
   getUserById(userId: string): Promise<Utilisateur> {
     if (this.auth.user) {

@@ -1,5 +1,5 @@
 <section *ngIf="auth.user|async as user; else showLogin">
-    <router-outlet></router-outlet>
+    <app-home (eventLogout)="logout()"></app-home>
 </section>
 
 <ng-template #showLogin>
