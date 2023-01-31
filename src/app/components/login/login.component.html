@@ -3,6 +3,6 @@
         <app-logo></app-logo>
     </div>
     <div class="login">
-        <app-connecteur></app-connecteur>
+        <app-connecteur (eventLogin)="eventLogin.emit($event)"></app-connecteur>
      </div>
 </div>

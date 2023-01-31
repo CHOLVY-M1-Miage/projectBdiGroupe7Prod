@@ -7,17 +7,17 @@
     <label>Identifiant</label>
   </div>
   <div>
-    <input type="text">
+    <input #login type="text">
   </div>
 
   <div>
     <label>Mot De Passe</label>
   </div>
   <div>
-    <input type="password">
+    <input #pwd type="password">
   </div>
   <div>
-    <button mat-button>connexion</button>
+    <button mat-button (click)="eventLogin.emit([login.value, pwd.value])">connexion</button>
   </div>
 
 </div>

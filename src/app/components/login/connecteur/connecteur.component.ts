@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {DataCenterService} from "../../../service/data-center.service";
 
 @Component({
@@ -7,8 +7,8 @@ import {DataCenterService} from "../../../service/data-center.service";
   styleUrls: ['./connecteur.component.css']
 })
 export class ConnecteurComponent {
-  //dentifiant: string;
-  //mdp: string;
+
+  @Output() eventLogin = new EventEmitter<string[]>();
 
   constructor(private dataCenter: DataCenterService) {}
 

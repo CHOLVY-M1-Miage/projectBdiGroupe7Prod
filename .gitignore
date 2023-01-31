@@ -1,2 +1,8 @@
 /node_modules/
 /.idea/
+/.angular/cache/
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

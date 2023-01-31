@@ -1,1 +1,7 @@
-<router-outlet></router-outlet>
+<section *ngIf="auth.user|async as user; else showLogin">
+    <router-outlet></router-outlet>
+</section>
+
+<ng-template #showLogin>
+    <app-login (eventLogin)="login($event)"></app-login>
+</ng-template>

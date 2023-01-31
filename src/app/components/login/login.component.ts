@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  @Output() eventLogin = new EventEmitter<string[]>();
 }

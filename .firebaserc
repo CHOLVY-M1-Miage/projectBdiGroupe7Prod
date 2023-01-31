@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gromedg7": {
+      "hosting": {
+        "gromed": [
+          "gromedg7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gromedg7"
+  }
+}
