@@ -32,7 +32,7 @@ export class PanierComponent {
   }
 
   updateQuantite(article:Article,newQuantite: any) {
-    article.QUANTITE = newQuantite.target.value;
+    article.QUANTITE = Number(newQuantite.target.value);
     this.totalPanier =this.totalCommande();
     /*Auto suppression*/
     if ((this.autoSuppression) && (article.QUANTITE == 0)){
