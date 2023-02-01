@@ -3,6 +3,9 @@ import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Presentation} from "../model/presentation.model";
 import {Article} from "../model/article";
+import {LigneCommande} from "../model/ligne-commande.model";
+import {LigneCommandeSearch} from "../model/ligne-commande-search.model";
+import {LigneCommandeResultat} from "../model/ligne-commande-resultat.model";
 
 @Injectable({
   providedIn: 'root'
@@ -18,11 +21,11 @@ export class RouteService {
     return this.http.get<Presentation[]>(url);
   }
 
-  getArticle(medicament: string, mollecule: string, fournisseur: string,estGenerique: boolean,estCollectivite: boolean): Observable<Article[]> {
+  getArticle(medicament: string, molecule: string, fournisseur: string,estGenerique: boolean,estCollectivite: boolean): Observable<Article[]> {
     const url = this.urlRF + 'presentations/article';
     let queryParams = new HttpParams();
     queryParams = queryParams.append('medicament', medicament);
-    queryParams = queryParams.append('mollecule', mollecule);
+    queryParams = queryParams.append('molecule', molecule);
     queryParams = queryParams.append('fournisseur', fournisseur);
     queryParams = queryParams.append('estGenerique', estGenerique);
     queryParams = queryParams.append('estCollectivite', estCollectivite);
@@ -30,4 +33,9 @@ export class RouteService {
     return this.http.get<Article[]>(url, { params: queryParams });
   }
 
+    postLigneCommande(ligneCom: LigneCommandeSearch) {
+      const url = this.urlRF + 'lignesCommande/add';
+      console.log('postLigneCommande: ',url);
+      return this.http.post<LigneCommandeResultat>(url, ligneCom);
+    }
 }

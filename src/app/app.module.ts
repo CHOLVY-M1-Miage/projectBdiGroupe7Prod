@@ -31,6 +31,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from "@angular/material/sort";
 import {MatExpansionModule} from "@angular/material/expansion";
+import { ConvertPipe } from './pipe/convert.pipe';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
     ManegeComponent,
     FiltreComponent,
     ResultatComponent,
-    ToolComponent
+    ToolComponent,
+    ConvertPipe
   ],
     imports: [
         BrowserModule,
@@ -68,7 +70,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
         MatSortModule,
         MatExpansionModule,
     ],
-  providers: [],
+  providers: [ConvertPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

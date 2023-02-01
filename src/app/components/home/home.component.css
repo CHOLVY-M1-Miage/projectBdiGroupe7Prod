@@ -21,10 +21,13 @@
 .recherche{
   width: 80vw;
 }
+
 .panier{
     border: 1px solid black;
     min-height:  80vh;
     width: 15vw;
+    /*overflow: scroll;
+    height: 60vh;*/
 }
 
 .resultat{

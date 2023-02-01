@@ -20,7 +20,8 @@ export class PanierComponent {
 
   constructor(private dataCenter: DataCenterService) {
     this.panierSubscription = this.dataCenter.articles$.subscribe((articles) => {
-          this.articles = articles
+          this.articles = articles;
+          console.log("articles update",this.articles);
         }
     );
   }
@@ -54,11 +55,12 @@ export class PanierComponent {
   }
 
   articleToLigneCommande(art:Article):LigneCommande{
+
     let ligCom = new LigneCommande();
-    ligCom.idCommande = -1;
+    /*ligCom.idCommande = -1;
     ligCom.idPresentation = art.ID;
     ligCom.quantite = art.QUANTITE;
-    return ligCom;
+    */return ligCom;
   }
 
 }

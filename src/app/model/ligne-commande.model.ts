@@ -1,5 +1,8 @@
+import {IdLigneCommande} from "./id-ligne-commande.model";
+
 export class LigneCommande {
-    idPresentation!:number;
-    idCommande!:number;
-    quantite!:number;
+
+
+    idLigneCommande !:IdLigneCommande;
+    quantite!: number;
 }

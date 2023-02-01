@@ -1,18 +1,18 @@
 <div>Votre panier ({{articles.length}} items)</div>
-<ng-container *ngFor="let article of articles">
-    <div class="article">
-        NOM:{{article.DENOMINATIONMEDICAMENT}}<br>
-        SUB:{{article.DENOMATIONSUBSTANCE}}<br>
-        DE: {{article.TITULAIRE}}<br>
-        SousTotal: <input type="number" size="1" min="0" max="99" [value]="article.QUANTITE" (change)="updateQuantite(article,$event)"> * {{article.PRIX}} = {{article.QUANTITE * article.PRIX}}€
-    </div>
-</ng-container>
+<div class="listArticle">
+    <ng-container *ngFor="let article of articles">
+        <div class="article">
+            NOM:{{article.DENOMINATIONMEDICAMENT}}<br>
+            SUB:{{article.DENOMATIONSUBSTANCE}}<br>
+            DE: {{article.TITULAIRE}}<br>
+            SousTotal: <input type="number" size="1" min="0" max="99" [value]="article.QUANTITE" (change)="updateQuantite(article,$event)"> * {{article.PRIX}} = {{article.QUANTITE * article.PRIX}}€
+        </div>
+    </ng-container>
+</div>
 <ng-container *ngIf="articles.length > 0">
-    <div class="article">
+    <div>
         TOTAL: {{totalPanier}}€
     </div>
-</ng-container>
-<ng-container>
     <button mat-button (click)="validerPanier()">Valider Panier</button>
 </ng-container>
 

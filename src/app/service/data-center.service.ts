@@ -15,8 +15,25 @@ export class DataCenterService {
   articles$ = this.articles.asObservable();
 
   addArticleInPanier(art:Article){
-    const newList = this.articles.value.map(a => a.ID ? a : art);
-    this.articles.next(newList);
+    /*
+    let include =false;
+    this.articles.value.forEach(
+        (a) => (a.ID == art.ID) ?  include = true : include = include
+    );
+    console.log("include: ",include);
+    if (include){
+     console.log(this.articles.value);
+     this.articles.value.forEach((a)=>(a.ID == art.ID) ? a.QUANTITE += 1 : a.QUANTITE);
+    }
+    else {
+      this.articles.value.push(art);
+    }*/
+    this.articles.value.push(art);
+    //console.log(this.articles.value);
+  }
+
+  addArtInPanier(refArt:number,quantite:number){
+
   }
 
   loadPanier():Article[]{
