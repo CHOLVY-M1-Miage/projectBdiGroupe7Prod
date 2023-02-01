@@ -35,4 +35,12 @@ export class DataCenterService {
 
     return articles;
   }
+
+  /*---Résultat Recherche----*/
+  resultatArticles = new BehaviorSubject<Article[]>([]);
+  resultatArticles$ = this.resultatArticles.asObservable();
+
+    setResultatArticle(res: Article[]) {
+        this.resultatArticles.next(res);
+    }
 }

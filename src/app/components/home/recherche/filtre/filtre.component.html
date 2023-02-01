@@ -26,10 +26,10 @@
                     </mat-form-field>
                 </div>
                 <div>
-                    <mat-checkbox>générique</mat-checkbox>
+                    <mat-checkbox [(ngModel)]="estGenerique">générique</mat-checkbox>
                 </div>
                 <div>
-                    <mat-checkbox>Agrément collectivité</mat-checkbox>
+                    <mat-checkbox [(ngModel)]="estCollectivite">Agrément collectivité</mat-checkbox>
                 </div>
                 <div>
                     <button mat-button (click)="search()">Rechecher</button>

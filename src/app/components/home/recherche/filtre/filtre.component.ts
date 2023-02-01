@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
+import {DataCenterService} from "../../../../service/data-center.service";
+import {RouteService} from "../../../../service/route.service";
 @Component({
   selector: 'app-filtre',
   templateUrl: './filtre.component.html',
@@ -9,22 +11,15 @@ export class FiltreComponent {
   fournisseur :any;
   mollecule :any;
   medicament :any;
+  estGenerique: any;
+  estCollectivite: any;
 
-  namefilter !: boolean;
-  moleculefilter !: boolean;
-  furnisherfilter !: boolean;
-  filterByName(event : any){
-    this.namefilter = event;
-  }
-  filterByMolecule(event : any){
-    this.moleculefilter = event;
-  }
-  filterByFurnisher(event : any){
-    this.furnisherfilter = event;
+  constructor(private dataCenter:DataCenterService,private route:RouteService) {
   }
 
   search(){
-    const url = "mollecule="+ this.mollecule+  "fournisseur="+this.fournisseur + "medicament="+this.medicament;
-    console.log(url);
+    this.route.getArticle(this.medicament.toUpperCase()," "+this.fournisseur.toUpperCase(),this.mollecule.toUpperCase(),this.estGenerique,this.estCollectivite).subscribe(
+        (resultatArticles)=> this.dataCenter.setResultatArticle(resultatArticles)
+    );
   }
 }
