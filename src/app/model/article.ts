@@ -5,5 +5,5 @@ export class Article {
     DENOMATIONSUBSTANCE !: string;
     TITULAIRE !: string;
     PRIX!:number;
-    QUANTITE = 0;
+    QUANTITE = 1;
 }

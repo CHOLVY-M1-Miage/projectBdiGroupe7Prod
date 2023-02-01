@@ -5,6 +5,7 @@
             NOM:{{article.DENOMINATIONMEDICAMENT}}<br>
             SUB:{{article.DENOMATIONSUBSTANCE}}<br>
             DE: {{article.TITULAIRE}}<br>
+            QUANTITE:{{article.QUANTITE}}<br>
             SousTotal: <input type="number" size="1" min="0" max="99" [value]="article.QUANTITE" (change)="updateQuantite(article,$event)"> * {{article.PRIX}} = {{article.QUANTITE * article.PRIX}}€
         </div>
     </ng-container>

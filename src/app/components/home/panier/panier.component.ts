@@ -14,8 +14,9 @@ import {BehaviorSubject, Subscription} from "rxjs";
 
 export class PanierComponent {
   panierSubscription: Subscription;
+  totalSubscription: Subscription;
   articles: Article[] = [];
-  totalPanier = this.totalCommande();
+  totalPanier = 0;
   autoSuppression = true;
 
   constructor(private dataCenter: DataCenterService) {
@@ -24,6 +25,10 @@ export class PanierComponent {
           console.log("articles update",this.articles);
         }
     );
+    this.totalSubscription = this.dataCenter.total$.subscribe((prix) => {
+      this.totalPanier = prix;
+      console.log("prix update",this.totalPanier);
+    })
   }
 
   updateQuantite(article:Article,newQuantite: any) {

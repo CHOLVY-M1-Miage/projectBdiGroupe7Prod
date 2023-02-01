@@ -94,7 +94,7 @@ export class RechercheComponent{
   addArticleToPanier(article:Article) {
     let ligneCom = this.convert.articleToLigneCommandeSearch(article);
     this.route.postLigneCommande(ligneCom).subscribe();
-    article.QUANTITE = 1;
+    //article.QUANTITE = 1;
     this.dataCenter.addArticleInPanier(article);
   }
 
