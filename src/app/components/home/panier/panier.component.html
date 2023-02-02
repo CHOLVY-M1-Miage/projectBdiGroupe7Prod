@@ -1,10 +1,9 @@
-<div>Votre panier ({{articles.length}} items)</div>
+<div class="titre">VOTRE PANIER ({{articles.length}} ITEMS)</div>
 <div class="listArticle">
     <ng-container *ngFor="let article of articles">
-        <div class="article">
-            NOM:{{article.DENOMINATIONMEDICAMENT}}<br>
-            SUB:{{article.DENOMATIONSUBSTANCE}}<br>
-            DE: {{article.titulaire}}<br>
+        <div class="article texte">
+            Nom:{{article.leMedoc}}<br>
+            Libelle:{{article.laPrez.libelle}}<br>
             <!--SousTotal: <input type="number" size="1" min="0" max="99" [value]="article.quantite" (change)="updateQuantite(article,$event)"> * {{article.prix}} = {{convert.decimal(article.quantite * article.prix)}}€-->
             SousTotal: {{article.quantite}} * {{article.prix}} = {{convert.decimal(article.quantite * article.prix)}}€
         </div>

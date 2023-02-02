@@ -35,7 +35,7 @@ export class ConvertPipe implements PipeTransform {
     ligCom.ligneCommande = new LigneCommande();
     ligCom.ligneCommande.idLigneCommande = new IdLigneCommande();
     ligCom.ligneCommande.idLigneCommande.idCommande= 15;
-    ligCom.ligneCommande.idLigneCommande.idPresentation = art.id;
+    ligCom.ligneCommande.idLigneCommande.idPresentation = art.laPrez.id;
     ligCom.ligneCommande.quantite = art.quantite;
     ligCom.forcePD = true;
     ligCom.forceStock = true;

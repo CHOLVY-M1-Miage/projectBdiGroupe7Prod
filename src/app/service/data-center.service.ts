@@ -22,10 +22,10 @@ export class DataCenterService {
   addArticleInPanier(art:Article){
     let include =false;
     this.articles.value.forEach(
-        (a) => (a.id == art.id)?  include = true : include = include
+        (a) => (a.laPrez.id == art.laPrez.id)?  include = true : include = include
     );
     if (include){
-     this.articles.value.forEach((a)=>(a.id == art.id) ? a.quantite += 0: a.quantite);
+     this.articles.value.forEach((a)=>(a.laPrez.id == art.laPrez.id) ? a.quantite += 0: a.quantite);
     }
     else {
       this.articles.value.push(art);

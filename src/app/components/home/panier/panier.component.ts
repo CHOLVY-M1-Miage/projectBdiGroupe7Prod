@@ -8,7 +8,7 @@ import {ConvertPipe} from "../../../pipe/convert.pipe";
 @Component({
   selector: 'app-panier',
   templateUrl: './panier.component.html',
-  styleUrls: ['./panier.component.css']
+  styleUrls: ['./panier.component.css','../../../app.component.css']
 })
 
 

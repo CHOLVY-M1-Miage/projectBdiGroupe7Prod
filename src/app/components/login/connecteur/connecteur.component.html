@@ -4,17 +4,17 @@
   </div>
 
   <div>
-    <label class="texte">Identifiant [toto@tata.fr]</label>
+    <label class="texte">Identifiant</label>
   </div>
   <div>
-    <input #login type="text" value="toto@tata.fr">
+    <input #login type="text">
   </div>
 
   <div>
-    <label class="texte">Mot de passe [tititi]"</label>
+    <label class="texte">Mot de passe"</label>
   </div>
   <div>
-    <input #pwd type="password" value="tititi">
+    <input #pwd type="password">
   </div>
   <div>
     <button mat-button (click)="eventLogin.emit([login.value, pwd.value])">connexion</button>

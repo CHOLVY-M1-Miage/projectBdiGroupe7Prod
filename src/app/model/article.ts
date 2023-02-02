@@ -1,3 +1,5 @@
+import {Prez} from "./prez.model";
+
 export class Article {
     id !: number;
     DENOMINATIONMEDICAMENT !: string;
@@ -6,4 +8,8 @@ export class Article {
     titulaire !: string;
     prix!:number;
     quantite = 1;
+
+    leMedoc !: string;
+
+    laPrez !: Prez;
 }
