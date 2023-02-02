@@ -19,6 +19,16 @@ mat-form-field{
     font-size: 14.67px;
 }
 
+mat-header-cell{
+    font-family: 'OPEN SANS SEMIBOLD';
+    font-size: 14.67px;
+}
+
+mat-cell{
+    font-family: Arial;
+    font-size: 14.67px;
+}
+
 .titre{
     font-family: 'OPEN SANS SEMIBOLD';
     font-size: 14.67px;

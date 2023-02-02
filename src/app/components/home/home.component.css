@@ -2,6 +2,7 @@
     display:flex;
     justify-content: space-between;
     vertical-align: center;
+    flex-wrap: wrap;
     padding: 2%;
 }
 
@@ -37,14 +38,25 @@
 .logo{
   max-height: 80px;
   text-align:center;
+  margin-left: 30vw;
 }
 
 button{
   float: right;
   margin: 25px 30px 0 0;
+    padding-tops: 5vh;
 }
 
-/*
-@media screen and (min-width: 800px){
 
-}*/
+@media screen and (max-width: 800px){
+    .logo{
+        height: 30px;
+        text-align:left;
+    }
+
+    button{
+        float: right;
+        margin-top: 100px;
+    }
+
+}

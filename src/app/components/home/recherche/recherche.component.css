@@ -1,3 +1,7 @@
+.flex{
+    flex-wrap: wrap;
+}
+
 input{
     width:80vh;
 }

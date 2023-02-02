@@ -39,8 +39,8 @@ export class RouteService {
     queryParams = queryParams.append('medicament', medicament);
     queryParams = queryParams.append('molecule', molecule);
     queryParams = queryParams.append('fournisseur', fournisseur);
-    queryParams = queryParams.append('estGenerique', estGenerique);
-    queryParams = queryParams.append('estCollectivite', estCollectivite);
+    if (estGenerique) { queryParams = queryParams.append('estGenerique', estGenerique)};
+    if (estCollectivite) { queryParams = queryParams.append('estCollectivite', estCollectivite)};
     console.log('getArticle: ' + url);
     return this.http.get<Article[]>(url, { params: queryParams });
   }

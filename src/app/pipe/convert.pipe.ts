@@ -34,11 +34,11 @@ export class ConvertPipe implements PipeTransform {
     let ligCom = new LigneCommandeSearch();
     ligCom.ligneCommande = new LigneCommande();
     ligCom.ligneCommande.idLigneCommande = new IdLigneCommande();
-    ligCom.ligneCommande.idLigneCommande.idCommande= -1;
+    ligCom.ligneCommande.idLigneCommande.idCommande= 15;
     ligCom.ligneCommande.idLigneCommande.idPresentation = art.id;
     ligCom.ligneCommande.quantite = art.quantite;
-    ligCom.forcePD = false;
-    ligCom.forceStock = false;
+    ligCom.forcePD = true;
+    ligCom.forceStock = true;
     return ligCom;
   }
 

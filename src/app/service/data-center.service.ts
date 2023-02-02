@@ -25,7 +25,7 @@ export class DataCenterService {
         (a) => (a.id == art.id)?  include = true : include = include
     );
     if (include){
-     this.articles.value.forEach((a)=>(a.id == art.id) ? a.quantite += 1: a.quantite);
+     this.articles.value.forEach((a)=>(a.id == art.id) ? a.quantite += 0: a.quantite);
     }
     else {
       this.articles.value.push(art);

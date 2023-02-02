@@ -6,13 +6,24 @@
   border: 2px solid #38BD4F;
   padding: 20px;
   width: 500px;
-  height: 180px;
+  height: 190px;
 }
 
 div{
   margin-bottom: 0.5vh;
 }
 
+.logo{
+  flex: center;
+}
+
 input{
   width : 25vw;
+}
+
+@media screen and (max-width: 800px){
+  #page {
+    width: auto;
+    height: auto;
+  }
 }

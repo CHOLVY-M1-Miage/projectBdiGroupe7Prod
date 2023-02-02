@@ -32,6 +32,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from "@angular/material/sort";
 import {MatExpansionModule} from "@angular/material/expansion";
 import { ConvertPipe } from './pipe/convert.pipe';
+import { DialogStockAlert} from "./components/home/recherche/recherche.component";
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -49,7 +51,8 @@ import { ConvertPipe } from './pipe/convert.pipe';
     FiltreComponent,
     ResultatComponent,
     ToolComponent,
-    ConvertPipe
+    ConvertPipe,
+    DialogStockAlert
   ],
     imports: [
         BrowserModule,
@@ -69,6 +72,7 @@ import { ConvertPipe } from './pipe/convert.pipe';
         MatTableModule,
         MatSortModule,
         MatExpansionModule,
+        MatDialogModule
     ],
   providers: [ConvertPipe],
   bootstrap: [AppComponent]
