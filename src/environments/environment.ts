@@ -7,5 +7,6 @@ export const environment = {
     apiKey: 'AIzaSyAO3Mtfa3E4tabEqKe-vmzgIkXVsJj-7aw',
     authDomain: 'gromedg7.firebaseapp.com',
     messagingSenderId: '615916993704',
-  }
+  },
+  apiUrl: 'http://localhost:8080/'
 }

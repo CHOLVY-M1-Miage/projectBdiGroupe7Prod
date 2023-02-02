@@ -16,7 +16,7 @@ export class UtilisateurService {
   currentUser!: Utilisateur;
   currentToken!: string;
 
-  private url = "toto"//environment.apiUrl;
+  private url = environment.apiUrl;
 
 
   constructor(private httpClient: HttpClient,public auth: AngularFireAuth) { 
@@ -32,6 +32,6 @@ export class UtilisateurService {
   }
 
   public async getUserById(id: string): Promise<Utilisateur>{
-    let  ret = await lastValueFrom(this.httpClient.get<Utilisateur>(this.url+'user/'+id, {headers: new HttpHeaders({Authorization:this.currentToken})})).then(user =>this.currentUser=user);
+    let  ret = await lastValueFrom(this.httpClient.get<Utilisateur>(this.url+'utilisateurs/'+id, {headers: new HttpHeaders({Authorization:this.currentToken})})).then(user =>this.currentUser=user);
     return ret;  }
 }
