@@ -5,27 +5,17 @@
         <!-- Position Column -->
         <ng-container matColumnDef="nom">
             <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number"> Nom médicament</mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.DENOMINATIONMEDICAMENT}} </mat-cell>
+            <mat-cell *matCellDef="let element"> {{element.leMedoc}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="presentation">
             <mat-header-cell *matHeaderCellDef mat-sort-header> Présentation</mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.libellePresentation}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="substance">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Substance</mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.DENOMATIONSUBSTANCE}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="fournisseur">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Fournisseur</mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.TITULAIRE}} </mat-cell>
+            <mat-cell *matCellDef="let element"> {{element.laPrez.libellePresentation}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="prix">
             <mat-header-cell *matHeaderCellDef mat-sort-header> Prix</mat-header-cell >
-            <mat-cell *matCellDef="let element"> {{element.prix}} </mat-cell>
+            <mat-cell *matCellDef="let element"> {{element.laPrez.prix}} </mat-cell>
         </ng-container>
         <!-- Symbol Column
         <ng-container matColumnDef="panier">

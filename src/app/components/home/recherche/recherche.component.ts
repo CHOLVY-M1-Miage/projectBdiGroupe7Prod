@@ -37,7 +37,7 @@ export class DialogStockAlert {
 export class RechercheComponent{
   recherche !: string;
 
-  displayedColumns: string[] = ["nom","presentation","substance","fournisseur","prix"];
+  displayedColumns: string[] = ["nom","presentation","prix"];
 
   clickedRows = new Set<Article>();
   resultatSubscription: Subscription;
