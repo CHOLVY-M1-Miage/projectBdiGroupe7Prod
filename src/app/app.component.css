@@ -1,3 +1,29 @@
 button{
-    margin-left: 1vw;
+    margin-top: 1vh;
+    box-shadow: #1EA7CF;
+    background-color: #1EA7CF;
+    color: white;
+    font-family: Arial;
+    font-size: 14.67px;
+}
+
+input{
+    color: black;
+    font-family: Arial;
+    font-size: 14.67px;
+}
+
+mat-form-field{
+    color: black;
+    font-family: Arial;
+    font-size: 14.67px;
+}
+
+.titre{
+    font-family: 'OPEN SANS SEMIBOLD';
+    font-size: 14.67px;
+}
+.texte{
+    font-family: Arial;
+    font-size: 14.67px;
 }

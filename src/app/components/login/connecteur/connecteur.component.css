@@ -13,22 +13,6 @@ div{
   margin-bottom: 0.5vh;
 }
 
-h1{
-  font-size: 3em;
-}
-
-label{
-  font-size: 1.2em;
-}
-
-button{
-  margin-top: 1vh;
-  box-shadow: #1EA7CF;
-  background-color: #1EA7CF;
-  color: white;
-  font-size: 1.2em;
-}
-
 input{
   width : 25vw;
 }

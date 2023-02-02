@@ -1,9 +1,9 @@
 export class Article {
-    ID !: number;
+    id !: number;
     DENOMINATIONMEDICAMENT !: string;
-    LIBELLEPRESTATION !: string;
+    libellePresentation !: string;
     DENOMATIONSUBSTANCE !: string;
-    TITULAIRE !: string;
-    PRIX!:number;
-    QUANTITE = 1;
+    titulaire !: string;
+    prix!:number;
+    quantite = 1;
 }

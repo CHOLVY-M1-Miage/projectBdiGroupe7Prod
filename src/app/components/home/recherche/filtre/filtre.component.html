@@ -3,33 +3,33 @@
         <mat-expansion-panel [expanded]="true">
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    <div class="data-title"> Rechercher un médicament</div>
+                    <div class="data-title titre"> RECHERCHER UN MEDICAMENT:</div>
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="filtre">
                 <div>
                     <mat-form-field class="example-full-width">
-                        <mat-label>Médicament</mat-label>
+                        <mat-label class="texte">Médicament</mat-label>
                         <input [(ngModel)]="medicament" matInput placeholder="Ex.doliprane">
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field class="example-full-width">
-                        <mat-label>Molécule</mat-label>
-                        <input [(ngModel)]="mollecule" matInput placeholder="Ex.paracétamol">
+                        <mat-label class="texte">Molécule</mat-label>
+                        <input [(ngModel)]="molecule" matInput placeholder="Ex.paracétamol">
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field class="example-full-width">
-                        <mat-label>Fournisseur</mat-label>
+                        <mat-label class="texte">Fournisseur</mat-label>
                         <input [(ngModel)]="fournisseur" matInput placeholder="Ex.boiron">
                     </mat-form-field>
                 </div>
                 <div>
-                    <mat-checkbox [(ngModel)]="estGenerique">Générique</mat-checkbox>
+                    <mat-checkbox [(ngModel)]="estGenerique"><p class="texte">Générique</p></mat-checkbox>
                 </div>
                 <div>
-                    <mat-checkbox [(ngModel)]="estCollectivite">Agrément collectivité</mat-checkbox>
+                    <mat-checkbox [(ngModel)]="estCollectivite"><p class="texte">Agrément collectivité</p></mat-checkbox>
                 </div>
                 <div>
                     <button mat-button (click)="search()">Rechecher</button>

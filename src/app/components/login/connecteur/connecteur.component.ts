@@ -4,7 +4,7 @@ import {DataCenterService} from "../../../service/data-center.service";
 @Component({
   selector: 'app-connecteur',
   templateUrl: './connecteur.component.html',
-  styleUrls: ['./connecteur.component.css']
+  styleUrls: ['./connecteur.component.css','../../../app.component.css']
 })
 export class ConnecteurComponent {
 

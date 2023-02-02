@@ -1,31 +1,31 @@
 <ng-container>
-    <mat-table [dataSource]="dataSource" matSort (matSortChange)="annouceSortChange($event)"
+    <mat-table [dataSource]="resultat" matSort (matSortChange)="annouceSortChange($event)"
            class="mat-elevation-z8">
 
         <!-- Position Column -->
         <ng-container matColumnDef="nom">
-            <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number"> Nom Médicament</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number"> Nom médicament</mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.DENOMINATIONMEDICAMENT}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="presentation">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> presentation</mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.LIBELLEPRESTATION}} </mat-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Présentation</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.libellePresentation}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="substance">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> subtance</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Substance</mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.DENOMATIONSUBSTANCE}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="fournisseur">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> fournisseur</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Fournisseur</mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.TITULAIRE}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="prix">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> prix</mat-header-cell >
-            <mat-cell *matCellDef="let element"> {{element.PRIX}} </mat-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Prix</mat-header-cell >
+            <mat-cell *matCellDef="let element"> {{element.prix}} </mat-cell>
         </ng-container>
         <!-- Symbol Column
         <ng-container matColumnDef="panier">

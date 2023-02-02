@@ -1,20 +1,20 @@
 <div id="page">
   <div>
-    <h1>Se connecter à GroMed</h1>
+    <h1 class="titre"> SE CONNECTER A GROMED</h1>
   </div>
 
   <div>
-    <label>Identifiant</label>
+    <label class="texte">Identifiant [toto@tata.fr]</label>
   </div>
   <div>
-    <input #login type="text">
+    <input #login type="text" value="toto@tata.fr">
   </div>
 
   <div>
-    <label>Mot De Passe</label>
+    <label class="texte">Mot de passe [tititi]"</label>
   </div>
   <div>
-    <input #pwd type="password">
+    <input #pwd type="password" value="tititi">
   </div>
   <div>
     <button mat-button (click)="eventLogin.emit([login.value, pwd.value])">connexion</button>

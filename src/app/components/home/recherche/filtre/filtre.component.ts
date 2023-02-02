@@ -5,11 +5,11 @@ import {RouteService} from "../../../../service/route.service";
 @Component({
   selector: 'app-filtre',
   templateUrl: './filtre.component.html',
-  styleUrls: ['./filtre.component.css']
+  styleUrls: ['./filtre.component.css','../../../../app.component.css']
 })
 export class FiltreComponent {
   fournisseur = "";
-  mollecule = "";
+  molecule = "";
   medicament = "";
   estGenerique= false;
   estCollectivite= false;
@@ -18,9 +18,12 @@ export class FiltreComponent {
   }
 
   search(){
-    if (!(this.medicament == "" && this.mollecule == "" && this.medicament == "" && !this.estGenerique && !this.estCollectivite)){
-      this.route.getArticle(this.medicament.toUpperCase()," "+this.fournisseur.toUpperCase(),this.mollecule.toUpperCase(),this.estGenerique,this.estCollectivite).subscribe(
-          (resultatArticles)=> this.dataCenter.setResultatArticle(resultatArticles)
+    if (!(this.medicament == "" && this.molecule == "" && this.medicament == "" && !this.estGenerique && !this.estCollectivite)){
+      this.route.getArticle(this.medicament.toUpperCase()," "+this.fournisseur.toUpperCase(),this.molecule.toUpperCase(),this.estGenerique,this.estCollectivite).subscribe(
+          (resultatArticles)=> {
+            console.log("ok");
+            this.dataCenter.setResultatArticle(resultatArticles);
+          }
       );
     }
   }

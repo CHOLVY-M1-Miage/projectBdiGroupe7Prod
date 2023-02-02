@@ -3,6 +3,7 @@ import {Article} from "../../../model/article";
 import {LigneCommande} from "../../../model/ligne-commande.model";
 import {DataCenterService} from "../../../service/data-center.service";
 import {BehaviorSubject, Subscription} from "rxjs";
+import {ConvertPipe} from "../../../pipe/convert.pipe";
 
 @Component({
   selector: 'app-panier',
@@ -19,7 +20,7 @@ export class PanierComponent {
   totalPanier = 0;
   autoSuppression = true;
 
-  constructor(private dataCenter: DataCenterService) {
+  constructor(private dataCenter: DataCenterService,public convert: ConvertPipe) {
     this.panierSubscription = this.dataCenter.articles$.subscribe((articles) => {
           this.articles = articles;
           console.log("articles update",this.articles);
@@ -32,27 +33,30 @@ export class PanierComponent {
   }
 
   updateQuantite(article:Article,newQuantite: any) {
-    article.QUANTITE = Number(newQuantite.target.value);
-    this.totalPanier =this.totalCommande();
+    article.quantite = Number(newQuantite.target.value);
+    //this.totalPanier =this.totalCommande();
+    this.dataCenter.updateTotal();
     /*Auto suppression*/
-    if ((this.autoSuppression) && (article.QUANTITE == 0)){
+    if ((this.autoSuppression) && (article.quantite == 0)){
       this.removeArticleFromPanier(article);
     }
   }
 
   removeArticleFromPanier(art:Article){
   this.articles.forEach((article,id)=>{
-      if(article.ID == art.ID) this.articles.splice(id,1);
+      if(article.id == art.id) this.articles.splice(id,1);
     });
   }
 
-  totalCommande():number{
+  totalCommande():void{
+
+    /*
     const init = 0;
     const totalPanier = this.articles?.reduce(
-        (accumulator, currentValue) => accumulator + (currentValue.PRIX * currentValue.QUANTITE),
+        (accumulator, currentValue) => accumulator + (currentValue.prix * currentValue.quantite),
         init
     );
-    return totalPanier;
+    return totalPanier;*/
   }
 
   validerPanier(){

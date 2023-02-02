@@ -15,13 +15,28 @@ export class ConvertPipe implements PipeTransform {
     return a+1;
   }
 
+  decimal(value?: number): number {
+    if (!value) { return 0.00; }
+    const xe = Math.trunc(value);
+    let x1 = '' + xe; // string
+    const xd = Math.trunc(value * 100 - xe * 100); // decimal 2 precision
+    let x2 = xd === 0 ? '00' : xd < 10 ? '0' + xd : '' + xd;
+
+    const rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {   // add espace each 3
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2');
+    }
+    x2 = x2 ? '.' + x2 : '';
+    return Number(x1 + x2);
+  }
+
   articleToLigneCommandeSearch(art:Article):LigneCommandeSearch{
     let ligCom = new LigneCommandeSearch();
     ligCom.ligneCommande = new LigneCommande();
     ligCom.ligneCommande.idLigneCommande = new IdLigneCommande();
     ligCom.ligneCommande.idLigneCommande.idCommande= -1;
-    ligCom.ligneCommande.idLigneCommande.idPresentation = art.ID;
-    ligCom.ligneCommande.quantite = art.QUANTITE;
+    ligCom.ligneCommande.idLigneCommande.idPresentation = art.id;
+    ligCom.ligneCommande.quantite = art.quantite;
     ligCom.forcePD = false;
     ligCom.forceStock = false;
     return ligCom;
