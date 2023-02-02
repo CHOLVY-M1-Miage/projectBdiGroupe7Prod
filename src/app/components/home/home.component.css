@@ -55,8 +55,22 @@ button{
     }
 
     button{
-        float: right;
-        margin-top: 100px;
+        margin-top: 200px;
+        float: none;
     }
 
+    .flex{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        vertical-align: center;
+        flex-wrap: wrap;
+        padding: 2%;
+    }
+
+    @media screen and (max-width: 800px){
+        .panier{
+            width: 380px;
+        }
+    }
 }
